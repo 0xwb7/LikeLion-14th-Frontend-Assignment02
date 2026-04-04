@@ -4,11 +4,11 @@ const users = [
     { name: "Mike", age: 30 }
 ];
 
-let max = 0;
-for (let i = 0; i < users.length; i++) {
-    if (users[i].age > max) {
-        max = users[i].age;
+let maxIdx = 0;
+for (let i = 1; i < users.length; i++) {
+    if (users[i].age > users[maxIdx].age) {
+        maxIdx = i;
     }
 }
 
-console.log(max);
+console.log(users[maxIdx].name)
